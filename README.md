@@ -45,10 +45,10 @@ LLM-Heuristic-Graph-Coloring/
 ├── LICENSE                                     # MIT License
 ├── requirements.txt                            # Python dependencies
 │
-├── Graph_Coloring_Heuristics_Experiment.ipynb  # All algorithms & experiments
+├── Graph_Coloring_Heuristics_Experiment.ipynb  # ⭐ All algorithms & experiments
 │
-├── report/
-│   ├── Evolving_DSatur_LLM_Graph_Coloring.pdf  # Experiment report
+├── docs/
+│   ├── Evolving_DSatur_LLM_Graph_Coloring.pdf  # GraphColoring_Paper
 │   └── Graph_Coloring_LLM_Presentation.pdf     # Presentation slides
 │
 ├── prompts/                                    # LLM prompts for each generation
