@@ -46,12 +46,14 @@ LLM-Heuristic-Graph-Coloring/
 ├── requirements.txt                            # Python dependencies
 │
 ├── Graph_Coloring_Heuristics_Experiment.ipynb  # ⭐ All algorithms & experiments
+├── Evolving_DSatur_LLM_Graph_Coloring.pdf      # GraphColoring_Paper
+├── Graph_Coloring_LLM_Presentation.pdf         # Presentation slides
 │
 ├── docs/
-│   ├── Evolving_DSatur_LLM_Graph_Coloring.pdf  # GraphColoring_Paper
-│   └── Graph_Coloring_LLM_Presentation.pdf     # Presentation slides
+│   ├── Evolving_DSatur_LLM_Graph_Coloring.pdf  
+│   └── Graph_Coloring_LLM_Presentation.pdf     
 │
-├── prompts/                                    # LLM prompts for each generation
+├── prompts/                                   # LLM prompts for each generation
 │   ├── gen1_feature_stacking.md               # Gen 1: Feature stacking (failed)
 │   ├── gen2_hierarchical.md                   # Gen 2: Tiered logic (stable)
 │   ├── gen3_lookahead.md                      # Gen 3: Lookahead strategy
