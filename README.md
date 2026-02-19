@@ -258,7 +258,7 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 <p align="center">
   <i>
     For full technical details, see the 
-    <a href="paper/Evolving_DSatur_LLM_Graph_Coloring.pdf">paper</a> 
+    <a href="docs/Evolving_DSatur_LLM_Graph_Coloring.pdf">paper</a> 
     and 
     <a href="Graph_Coloring_Heuristics_Experiment.ipynb">implementation notebook</a>.
   </i>
