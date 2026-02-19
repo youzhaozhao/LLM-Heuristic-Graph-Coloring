@@ -2,7 +2,6 @@
 ### LLM-Guided Design of Second-Order Heuristics for Graph Coloring
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python" alt="Python version">
   <img src="https://img.shields.io/badge/Jupyter-Notebook-orange?style=for-the-badge&logo=jupyter" alt="Jupyter Notebook">
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License">
   <img src="https://img.shields.io/badge/Graph%20Coloring-Heuristics-brightgreen?style=for-the-badge" alt="Graph Coloring">
@@ -49,7 +48,7 @@ LLM-Heuristic-Graph-Coloring/
 ├── Graph_Coloring_Heuristics_Experiment.ipynb  # All algorithms & experiments
 │
 ├── report/
-│   ├── Evolving_DSatur_LLM_Graph_Coloring.pdf  # ⭐ Experiment report
+│   ├── Evolving_DSatur_LLM_Graph_Coloring.pdf  # Experiment report
 │   └── Graph_Coloring_LLM_Presentation.pdf     # Presentation slides
 │
 ├── prompts/                                    # LLM prompts for each generation
@@ -76,11 +75,11 @@ We document the complete iterative design process, from initial failure to final
 
 | Generation | Strategy | Core Formula | Key Insight | Outcome |
 |:----------:|----------|--------------|-------------|:---------:|
-| **Gen 1** | Feature Stacking | `3·Sat + 1.2·U + 0.7·(1-CC)·Deg + 0.9·ln(S2)` | Multi-feature linear combination | ❌ Failed |
-| **Gen 2** | Hierarchical Logic | `Sat × 10⁸ + TieBreaker` | Saturation absolute dominance | ⚠️ Stable |
-| **Gen 3** | Lookahead | `Sat × 10⁸ + Σ Sat(v)²` | Future cost via squared neighbor saturation | ✅ Improved |
-| **Gen 4** | Crisis Awareness | `Sat × 10⁹ + Σ Sat(v)/(Resid(v)+1)` | Risk ratio for dead-end detection | ✅ Specialized |
-| **Gen 5** | **SAT-CR (Hybrid)** | `Sat × 10⁹ + Σ Sat(v)²/(Resid(v)+1)` | **Adaptive fusion of V3+V4** | ✅ **Best** |
+| **Gen 1** | Feature Stacking | `3·Sat + 1.2·U + 0.7·(1-CC)·Deg + 0.9·ln(S2)` | Multi-feature linear combination |  Failed |
+| **Gen 2** | Hierarchical Logic | `Sat × 10⁸ + TieBreaker` | Saturation absolute dominance |  Stable |
+| **Gen 3** | Lookahead | `Sat × 10⁸ + Σ Sat(v)²` | Future cost via squared neighbor saturation |  Improved |
+| **Gen 4** | Crisis Awareness | `Sat × 10⁹ + Σ Sat(v)/(Resid(v)+1)` | Risk ratio for dead-end detection |  Specialized |
+| **Gen 5** | **SAT-CR (Hybrid)** | `Sat × 10⁹ + Σ Sat(v)²/(Resid(v)+1)` | **Adaptive fusion of V3+V4** |  **Best** |
 
 > 📄 **Full prompts available in [`prompts/`](prompts/) directory**
 
@@ -94,7 +93,7 @@ Benchmark on **2,650 graphs** (60 vertices each, 500 instances per main category
 
 | Graph Type | DSatur (1979) | SAT-CR (Ours) | Improvement | Statistical Significance |
 |:-----------|:-------------:|:-------------:|:-----------:|:------------------------:|
-| **Planar** | 4.672 | **4.418** | **-5.4%** ⭐ | t=4.32, **p=0.003** |
+| **Planar** | 4.672 | **4.418** | **-5.4%** | t=4.32, **p=0.003** |
 | Dense Random (p=0.5) | 12.526 | **12.490** | -0.3% | — |
 | Sparse Random (p=0.1) | 4.190 | 4.222 | +0.8% | — |
 | Scale-Free (Barabási) | 4.033 | **4.033** | Optimal | — |
@@ -240,12 +239,11 @@ All experiments are contained in a **single notebook** for easy reproduction:
 If you find this work useful, please cite:
 
 ```bibtex
-@article{yuan2024evolving,
+@article{yuan2025evolving,
   title={Evolving DSatur: LLM-Guided Design of Second-Order Heuristics for Graph Coloring},
   author={Yuan, Zhouyan},
   year={2025},
   note={Undergraduate research project}
-  url={https://github.com/youzhaozhao/LLM-Heuristic-Graph-Coloring}
 }
 ```
 
@@ -254,14 +252,6 @@ If you find this work useful, please cite:
 ## 📄 License
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **DSatur Algorithm**: [Brélaz, 1979](https://doi.org/10.1145/359094.359101) – Classic heuristic baseline
-- **FunSearch**: [Romera-Paredes et al., Nature 2024](https://www.nature.com/articles/s41586-023-06924-6) – Inspiration for LLM-assisted algorithm design
-- **OPRO**: [Yang et al., ICLR 2024](https://arxiv.org/abs/2309.03409) – Optimization by prompt engineering
 
 ---
 
